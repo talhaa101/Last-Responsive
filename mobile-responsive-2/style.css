@@ -2,6 +2,7 @@ body,p,a,ul,li{
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
   }
   li{
     list-style-type: none;
@@ -10,3 +11,81 @@ body,p,a,ul,li{
   .nav-li{
     display: none;
   }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 5px 5px;
+    background-color: rgb(255, 255, 255);
+  
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: rgb(56, 157, 252);
+    gap: 10px;
+}
+
+.docker{
+  font-size: 20px;
+}
+
+.hamburger{
+  font-size: 20px;
+}
+
+.search-container {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  background-image: url('images/hero.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+
+}
+
+/* Search Box Styling */
+.search-box {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  background: white;
+}
+
+.search-box input {
+  padding: 12px 10px;
+  font-size: 16px;
+  color: #00796b;
+  height: 20px;
+  outline: none;
+
+}
+
+.search-box button {
+  background-color: #00796b;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px; 
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+
+.search-box button:hover {
+  background-color: #005f56;
+}
+
+.search-box input::placeholder {
+  color: #00796b; 
+}
