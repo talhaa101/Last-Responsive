@@ -1,9 +1,12 @@
 body,p,a,ul,li{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     box-sizing: border-box;
   }
+
+  
   li{
     list-style-type: none;
   }
@@ -88,4 +91,66 @@ body,p,a,ul,li{
 
 .search-box input::placeholder {
   color: #00796b; 
+}
+
+.latest-photo{
+  color: #0ab8a6;
+}
+
+.all-photos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Image Grid Container - Full Width */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Image Card */
+.image-card {
+  background: #fff;
+  overflow: hidden;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+}
+
+/* Image Styling */
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Image Info */
+.image-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.date {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (min-width: 680px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  }
 }
